@@ -1,0 +1,7 @@
+
+baseurl = "/"
+languageCode = "en-nz"
+languageLang = "en"
+title = "Refresh Beauty Therapy"
+
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]

@@ -1,0 +1,222 @@
+
+/* Contact Page Styling */
+
+.contact {
+
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .contact__background {
+
+        @include query-tablet-l {
+
+            width: 20%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $cream-color;
+        }
+        @include query-tablet {
+
+            width: 10%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $cream-color;
+        }
+        @include query-mobile-xl {
+
+            background-color: transparent;
+        }
+    }
+    .contact__container {
+
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0 $vertical-section-spacing;
+        margin: $horizontal-section-spacing--l 0;
+
+        @include query-laptop-l {
+
+            padding: 0 $horizontal-section-spacing--m;
+        }
+        @include query-laptop {
+
+            padding: 0 $horizontal-section-spacing--s;
+        }
+        @include query-tablet-l {
+
+            flex-direction: column;
+            padding: 0 0 0 $horizontal-section-spacing--s;
+        }
+        @include query-tablet {
+
+            padding: 0 0 0 $horizontal-section-spacing--xs;
+        }
+        @include query-mobile-xl {
+
+            padding: 0;
+        }
+    }
+    @include query-tablet-l {
+
+        flex-direction: column;
+    }
+}
+
+.contact__left {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .contact__left-container {
+
+        @include flex-column-center-start--vertical;
+        
+        .contact__header {
+
+            color: $secondary-color-dark;
+            margin-bottom: $medium-spacing;
+            box-shadow: inset 0 -20px 0 0 $primary-color-light;
+        }
+        .contact__phone {
+
+            h4 {
+
+                color: $secondary-color-dark;
+                font-family: "gilroy-light";
+                margin-bottom: $extra-small-spacing;
+            }
+            h5 {
+
+                color: $secondary-color-dark;
+            }
+            h5:first-of-type {
+
+                margin-bottom: $small-spacing;
+            }
+            @include query-mobile-xl {
+
+                text-align: center;
+            }
+        }
+        .contact__social {
+
+            width: 4rem;
+            z-index: 101;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: $large-spacing 0 $xl-spacing 0;
+
+            .social {
+
+                svg > path {
+
+                    @include transition-fast;
+                }
+                &:hover > svg > path {
+
+                    fill: $secondary-color!important;
+                }
+            }
+            .social--facebook {
+
+                width: 15px;
+            }
+            .social--instagram {
+    
+                width: 27.5px;
+            }
+            @include query-tablet-l {
+
+                margin: $large-spacing 0;
+            }
+        }
+        .contact__information {
+
+            p {
+
+                color: $secondary-color-dark;
+            }
+            @include query-laptop-l {
+
+                max-width: 82.5%;
+            }
+            @include query-tablet-l {
+
+                max-width: 100%;
+            }
+            @include query-tablet {
+
+                max-width: 90%;
+            }
+            @include query-mobile-xl {
+
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+        @include query-mobile-xl {
+
+            padding: 0 $large-spacing;
+            align-items: center;
+        }
+    }
+    @include query-tablet-l {
+
+        width: 100%;
+        @include flex-column-center-start--vertical;
+        margin-bottom: $between-section-spacing;
+    }
+    @include query-mobile-xl {
+
+        align-items: center;
+    }
+}
+
+.contact__right {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .contact__right-container {
+
+        width: 100%;
+        height: 100%;
+        @include flex-column-center;
+        align-items: flex-end;
+        justify-content: flex-start;
+
+        @include query-tablet-l {
+
+            align-items: flex-start;
+        }
+        @include query-mobile-xl {
+
+            align-items: center;
+        }
+    }
+    @include query-tablet-l {
+
+        width: 100%;
+
+        @include flex-column-center;
+    }
+}

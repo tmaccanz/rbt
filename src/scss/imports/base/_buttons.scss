@@ -1,0 +1,107 @@
+
+/* Button Styling */
+
+// Standard Button //
+
+.button-link {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    z-index: 101;
+
+    .button-outline {
+
+        width: 8.5rem;
+        height: 2.75rem;
+        grid-column: 1 / span 1 ;
+        grid-row: 1 / span 1;
+        border: solid 2px $primary-color-light;
+        border-radius: 2px;
+        background-color: $primary-color-light;
+    }
+    .button {
+
+        width: 8.5rem;
+        height: 2.75rem;
+        grid-column: 1 / span 1 ;
+        grid-row: 1 / span 1;
+        @include flex-row-center;
+        transform: translate(-10px, -10px);
+        background-color: $white-color;
+        border: solid 2px $secondary-color;
+        border-radius: 2px;
+        @include transition-standard;
+
+        .button__text {
+
+            @include transition-standard;
+            color: $secondary-color-dark;
+        }
+    }
+    .button--right {
+
+        transform: translate(10px, -10px);
+    }
+    &:hover {
+
+        cursor: pointer;
+    }
+    &:hover > .button {
+
+        transform: translate(0rem, 0rem);
+    }
+}
+
+// Cream Button //
+
+.button-link--cream {
+
+    width: 8.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    z-index: 101;
+
+    .button-outline--cream {
+
+        width: 8.5rem;
+        height: 2.75rem;
+        grid-column: 1 / span 1 ;
+        grid-row: 1 / span 1;
+        border-radius: 2px;
+        background-color: rgba(220, 173, 173, 0.3);
+    }
+    .button--cream {
+
+        width: 8.5rem;
+        height: 2.75rem;
+        grid-column: 1 / span 1 ;
+        grid-row: 1 / span 1;
+        @include flex-row-center;
+        transform: translate(-10px, -10px);
+        background-color: $cream-color;
+        border: solid 2px $secondary-color;
+        border-radius: 2px;
+        @include transition-standard;
+
+        .button__text--cream {
+
+            @include transition-standard;
+            color: $secondary-color-dark;
+        }
+    }
+    .button--right {
+
+        transform: translate(10px, -10px);
+    }
+    &:hover {
+
+        cursor: pointer;
+    }
+    &:hover > .button--cream {
+
+        transform: translate(0rem, 0rem);
+    }
+}
+

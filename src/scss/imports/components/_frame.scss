@@ -1,0 +1,455 @@
+
+/* Frame Styling */
+
+.frame-floral {
+
+    width: 50px;
+    position: fixed;
+    z-index: 1100;
+
+    @include query-tablet {
+
+        width: 35px;
+    }
+}
+
+.frame-border--horizontal {
+
+    width: 50%;
+    height: 2px;
+    background-color: $secondary-color;
+}
+
+.frame-border--vertical {
+
+    width: 2px;
+    height: 50%;
+    background-color: $secondary-color;
+}
+
+.frame__top {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: flex-start;
+    top: 30px;
+    z-index: 1002;
+
+    .frame__top--border {
+
+        width: 50%;
+    }
+    .frame-floral--top-middle-left {
+
+        width: 35px;
+        left: 25%;
+        transform: rotate(175deg);
+        top: 29px;
+
+        @include query-tablet {
+
+            width: 25px;
+        }
+        @include query-mobile-xl {
+
+            display: none;
+        }
+    }
+    .frame-floral--top-middle-right {
+
+        width: 35px;
+        transform: rotate(60deg);
+        right: 17.5%;
+        top: 10px;
+
+        @include query-tablet {
+
+            width: 27.5px;
+            top: 14px;
+        }
+        @include query-mobile-xl {
+
+            display: none;
+        }
+    }
+}
+
+.logo-link {
+
+    width: 95px;
+    position: relative;
+    bottom: 20px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+
+    .logo {
+
+        width: 100%;
+        height: 100%;
+    }
+    @include query-laptop-l {
+
+        width: 90px;
+    }
+    @include query-mobile-xl {
+    
+        width: 110px;
+    }
+}
+
+.frame__right {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    right: 30px;
+    position: fixed;
+    padding: 30px 0;
+    z-index: 1002;
+
+    .frame-floral--right-corner-top {
+
+        transform: rotate(260deg);
+        right: 28px;
+        top: 27px;
+
+        @include query-widescreen {
+            
+            right: calc(50% - 960px);
+        }
+    }
+    .frame-floral--right-middle-top {
+
+        width: 35px;
+        top: 27.5%;
+
+        @include query-tablet {
+
+            width: 25px;
+        }
+        @include query-mobile-xl {
+
+            display: none;
+        }
+    }
+    .frame-border--vertical-right {
+
+        height: 40%;
+
+        @include query-mobile-xl {
+
+            height: 37.5%;
+        }
+    }
+    .frame__booking {
+
+        writing-mode: vertical-rl;
+        position: relative;
+        left: 11px;
+        cursor: pointer;
+
+        .frame__booking-text {
+
+            color: $secondary-color-dark;
+            transition: 0.45s ease-in-out;
+        }
+    
+        &:before,
+        &:after {
+    
+            content: '';
+            background: $secondary-color;
+            position: absolute;
+            right: 50%;
+            height: 0;
+            width: 2px;
+        }
+        &:before {
+    
+            top: 0;
+        }
+        &:after {
+    
+            bottom: 0;
+            transition: height 0.5s ease;
+        }
+        &:hover {
+    
+            &:before {
+    
+                height: 100%;  
+                transition: height 0.5s ease;
+            }
+            
+            &:after {
+    
+                height: 100%;
+                background: transparent;
+                transition: 0;
+            }
+        }
+        &:hover > .frame__booking-text {
+
+            color: $secondary-color;
+        }
+        @include query-laptop {
+
+            left: 9px;
+        }
+        @include query-tablet-l {
+
+            left: 10px;
+        }
+        @include query-tablet {
+
+            left: 8px;
+        }
+        @include query-mobile-l {
+
+            left: 9px;
+        }
+    }
+    .frame-floral--right-middle-bottom {
+
+        width: 30px;
+        bottom: 27.5%;
+        transform: rotate(0deg);
+
+        @include query-tablet {
+
+            width: 20px;
+        }
+        @include query-mobile-xl {
+
+            display: none;
+        }
+    }
+    .frame-floral--right-corner-bottom {
+
+        width: 60px;
+        bottom: 5px;
+
+        @include query-tablet {
+
+            width: 40px;
+        }
+    }
+    @include query-tablet {
+
+        right: 25px;
+    }
+    @include query-mobile-xl {
+
+        right: 20px;
+    }
+    @include query-widescreen {
+
+        right: calc(50% - 960px);
+    }
+}
+
+.frame__bottom {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 30px;
+    padding: 0 30px;
+    z-index: 1002;
+
+    .frame__bottom--border {
+
+        width: calc(50% - 50px);
+    }
+    .map-icon {
+
+        position: relative;
+        top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    
+        .map-icon__label {
+    
+            color: $secondary-color;
+            margin-bottom: $gap-spacing;
+        }
+        .map-icon__item-container {
+    
+            width: 55px;
+            height: 35px;
+            position: relative;
+
+            .map-icon__item {
+
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                fill: none;
+                stroke: $secondary-color;
+                stroke-width: 10px;
+            }
+            .map-icon__item--overlay {
+
+                .map-icon__item--eye-circle-inner {
+
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                .map-icon__item--eye-circle-outer {
+
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .frame-floral--bottom-middle-left {
+
+        width: 32.5px;
+        left: 25%;
+        bottom: 4px;
+
+        @include query-tablet {
+
+            width: 25px;
+            bottom: 9.5px;
+        }
+        @include query-mobile-xl {
+
+            display: none;
+        }
+    }
+    @include query-tablet {
+
+        padding: 0;
+    }
+    @include query-widescreen {
+
+        padding: 0;
+    }
+}
+
+.frame__left {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 30px;
+    position: fixed;
+    padding: 30px 0;
+    z-index: 1002;
+
+    .frame-floral--left-corner-top {
+
+        width: 60px;
+        top: 30px;
+        left: 26px;
+
+        @include query-tablet {
+
+            width: 40px;
+        }
+        @include query-widescreen {
+            
+            left: calc(50% - 960px);
+        }
+    }
+    .frame-floral--left-middle-top {
+
+        top: 25%;
+        transform: rotate(130deg);
+        left: 21px;
+
+        @include query-tablet {
+
+            left: 20px;
+        }
+        @include query-mobile-xl {
+
+            display: none;
+        }
+        @include query-widescreen {
+            
+            left: calc(50% - 969px);
+        }
+    }
+    .menu-icon {
+
+        width: 45px;
+        height: 50px;
+        margin: 25px 0;
+        position: relative;
+        right: 20px;
+        background-color: transparent;
+        cursor: pointer;
+        @include flex-column-center;
+        @include transition-fast;
+    
+        .menu-icon__line {
+    
+            width: 35px;
+            height: 2px;
+            background-color: $secondary-color;
+            border-radius: 2px;
+            @include transition-fast;
+
+            @include query-mobile-xl {
+
+                width: 30px;
+            }
+        }
+        .menu-icon__line--middle {
+    
+            margin: 7px 0;
+        }
+        &:hover > .menu-icon__line {
+    
+            background-color:  $secondary-color-accent;
+        }
+        @include query-mobile-xl {
+
+            transform: rotate(90deg);
+        }
+    }    
+    .frame-floral--left-corner-bottom {
+
+        width: 55px;
+        bottom: 27px;
+        left: 25px;
+        transform: rotate(15deg);
+
+        @include query-tablet {
+
+            width: 35px;
+            bottom: 26px;
+            left: 22px;
+        }
+        @include query-widescreen {
+            
+            left: calc(50% - 969px);
+        }
+    }
+    @include query-tablet {
+
+        left: 25px;
+    }
+    @include query-mobile-xl {
+
+        left: 20px;
+    }
+    @include query-widescreen {
+
+        left: calc(50% - 960px);
+    }
+}

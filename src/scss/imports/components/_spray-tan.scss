@@ -1,0 +1,86 @@
+
+/* Spray Tan Styling */
+
+.treatment__menu-container > .button-link--spray-tan {
+
+    @include query-mobile-xl {
+
+        margin-left: calc(50% - 4.25rem);
+    }
+}
+
+.spray-tan {
+
+    max-width: 65%;
+    @include flex-column-center-start--vertical;
+    position: relative;
+
+    .spray-tan__container {
+
+        opacity: 0;
+        margin-top: $xl-spacing;
+
+        .treatment__text {
+
+            color: $secondary-color-dark;
+    
+            &:first-of-type {
+    
+                margin-bottom: $medium-spacing;
+            }
+            &:last-of-type {
+    
+                margin: $medium-spacing 0;
+            }
+            @include query-mobile-xl {
+
+                text-align: center;
+            }
+        }
+        h5 {
+    
+            color: $secondary-color-dark;
+            margin-bottom: $small-spacing;
+    
+            &:last-of-type {
+    
+                margin-bottom: 0;
+            }
+            @include query-mobile-xl {
+
+                text-align: left;
+            }
+        }
+        @include query-mobile-xl {
+
+            padding: 0 $medium-spacing;
+            margin-top: $vertical-section-spacing;
+        }
+        @include query-mobile-l {
+
+            margin-top: $xl-spacing;
+            padding: 0 $small-medium-spacing;
+        }
+    }
+    @include query-laptop {
+
+        max-width: 75%;
+    }
+    @include query-tablet-l {
+
+        max-width: 80%;
+    }
+    @include query-tablet {
+
+        max-width: 90%;
+    }
+    @include query-mobile-xl {
+
+        max-width: 100%;
+    }
+}
+
+.button-link--spray-tan {
+
+    margin-top: $xl-spacing;
+}

@@ -1,0 +1,81 @@
+
+/* Anchor Styling */
+
+.map {
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    @include flex-column-center;
+
+    .map__background {
+
+        width: 60%;
+        height: 70%;
+        background-color: $secondary-color-accent;
+        @include flex-column-center;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        border-radius: 2px;
+
+        #map__item {
+
+            width: calc(100% - 100px);
+            height: calc(100% - 100px);
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.04), 0 0 40px rgba(0, 0, 0, 0.04);
+
+            @include query-tablet {
+
+                width: 100%;
+                height: 100vh;
+            }
+        }
+        @include query-laptop {
+
+            width: 70%;
+        }
+        @include query-tablet-l {
+
+            width: 75%;
+        }
+        @include query-tablet {
+
+            width: 100%;
+            height: 100%;
+        }
+        @include query-widescreen {
+
+            max-width: 1152px;
+            max-height: 656px;
+        }
+    }
+    .map__overlay {
+
+        width: 60%;
+        height: 70%;
+        position: absolute;
+        background-color: $secondary-color-accent;
+        z-index: 2001;
+
+        @include query-laptop {
+
+            width: 70%;
+        }
+        @include query-tablet-l {
+
+            width: 75%;
+        }
+        @include query-tablet {
+
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.frame__bottom--map-mobile {
+
+    align-self: center;
+}

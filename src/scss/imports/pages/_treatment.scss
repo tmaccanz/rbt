@@ -1,0 +1,256 @@
+
+/* Treatment Item Styling */
+
+// Treatment Introduction //
+
+.treatment__menu {
+
+    width: calc(100% - 17rem);
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    margin: $vertical-section-spacing 0;
+    background-color: $cream-color;
+    z-index: 101;
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.02), 0 1px 4px rgba(0, 0, 0, 0.02), 0 0 40px rgba(0, 0, 0, 0.02);
+
+    .treatment__menu-container {
+
+        width: 100%;
+        padding: $horizontal-section-spacing--s;
+
+        .treatment__item {
+
+            width: 100%;
+            @include flex-row-center-between;
+            margin-bottom: 4.5rem;
+
+            .treatment__text-container {
+
+                width: 80%;
+
+                .treatment__text {
+
+                    color: $secondary-color-dark;
+
+                    @include query-mobile-xl {
+
+                        text-align: center;
+                    }
+                }
+                .treatment__sub-text {
+
+                    margin: $small-spacing 45% 0 0;
+                    color: $secondary-color-dark;
+                    font-family: "gilroy-light";
+                    
+                    @include query-laptop-l {
+
+                        margin: $small-spacing 40% 0 0;
+                    }
+                    @include query-laptop {
+
+                        margin: $small-spacing 35% 0 0;
+                    }
+                    @include query-tablet-l {
+
+                        margin: $small-spacing 30% 0 0;
+                    }
+                    @include query-tablet {
+
+                        margin: $small-spacing 20% 0 0;
+                    }
+                    @include query-mobile-xl {
+
+                        width: 100%;
+                        margin: $small-spacing 0 0 0;
+                        text-align: center;
+                    }
+                }
+                @include query-mobile-xl {
+
+                    @include flex-column-center;
+                }
+            }
+            .treatment__price {
+
+                color: $secondary-color-dark;
+                margin-left: $small-spacing;
+
+                @include query-mobile-xl {
+
+                    margin-left: 0;
+                    margin-top: $small-medium-spacing;
+                }
+            }
+            &:nth-of-type(2) {
+
+                margin-bottom: $medium-spacing;
+
+                @include query-mobile-xl {
+
+                    display: none;
+                }
+            }
+            &:last-of-type {
+
+                margin-bottom: 0;
+            }
+            @include query-mobile-xl {
+
+                @include flex-column-center-between;
+            }
+        }
+        @include query-laptop-l {
+
+            padding: $horizontal-section-spacing--xs;
+        }
+        @include query-tablet-l {
+
+            padding: $horizontal-section-spacing--l $horizontal-section-spacing--s;
+        }
+        @include query-tablet {
+
+            padding: $horizontal-section-spacing--l $xl-spacing;
+        }
+        @include query-mobile-xl {
+
+            padding: $horizontal-section-spacing--l $medium-spacing;
+        }
+        @include query-mobile-l {
+
+            padding: $horizontal-section-spacing--l $small-medium-spacing;
+        }
+    }
+    @include query-laptop-l {
+
+        width: calc(100% - 11rem);
+    }
+    @include query-tablet-l {
+
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0;
+    }
+    @include query-widescreen {
+
+        width: calc(1920px - 17rem);
+    }
+}
+
+.treatment__item--header {
+    
+    width: 100%;
+    @include flex-row-center;
+    margin-bottom: $horizontal-section-spacing--xs;
+
+    .treatment__text-container--header {
+
+        .treatment__header {
+
+            color: $secondary-color-dark;
+            box-shadow: inset 0 -20px 0 0 rgba(220, 173, 173, 0.3);
+
+            @include query-tablet {
+
+                text-align: center;
+                box-shadow: unset;
+            }
+        }
+    }
+}
+
+#treatment__item--group {
+
+    width: 100%;
+    @include flex-column-center-start--vertical;
+    margin-bottom: $xl-spacing;
+
+    .treatment__text {
+
+        color: $secondary-color-dark;
+
+        @include query-mobile-xl {
+
+            text-align: center;
+        }
+    }
+    .treatment__sub-text {
+
+        margin: $small-spacing 45% 0 0;
+        color: $secondary-color-dark;
+        font-family: "gilroy-light";
+
+        @include query-laptop-l {
+
+            margin: $small-spacing 40% 0 0;
+        }
+        @include query-laptop {
+
+            margin: $small-spacing 35% 0 0;
+        }
+        @include query-tablet-l {
+
+            margin: $small-spacing 30% 0 0;
+        }
+        @include query-tablet {
+
+            margin: $small-spacing 20% 0 0;
+        }
+        @include query-mobile-xl {
+
+            width: 100%;
+            margin: $small-spacing 0 0 0;
+            text-align: center;
+        }
+    }
+    .treatment__text-container--group {
+
+        width: 100%;
+        @include flex-row-center-between;
+
+        .treatment__price--first {
+
+            margin-top: 0;
+        }
+        .treatment__price {
+
+            margin-top: $small-spacing;
+        }
+        @include query-mobile-xl {
+
+            margin-top: $small-medium-spacing;
+        }
+        @include query-mobile-xl {
+
+            @include flex-column-center-between;
+        }
+    }
+    @include query-mobile-xl {
+
+        @include flex-column-center;
+    }
+}
+
+#treatment__info {
+
+    margin-right: 35%;
+
+    @include query-laptop {
+
+        margin-right: 25%;
+    }
+    @include query-tablet {
+
+        margin-right: 5%;
+    }
+    @include query-mobile-xl {
+
+        margin-right: 0;
+    }
+}
+
+// Spray Tan //
+
+@import "imports/components/spray-tan";

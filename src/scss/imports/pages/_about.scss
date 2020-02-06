@@ -1,0 +1,360 @@
+
+/* About Page Styling */
+
+.about {
+
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+}
+
+// About Content //
+
+.about__background {
+
+    width: 35%;
+    height: 40%;
+    position: absolute;
+    background-color: $cream-color;
+    top: 0; 
+    left: 0;
+    z-index: -1;
+
+    @include query-laptop-l {
+
+        width: 100%;
+        height: 960px;
+        position: absolute;
+        background-color: $cream-color;
+        top: 0; 
+        left: 0;
+        border-radius: 2px;
+        z-index: -1;
+    }
+    @include query-laptop {
+
+        height: 920px;
+    }
+    @include query-tablet-l {
+
+        height: 870px;
+    }
+    @include query-tablet {
+
+        height: 325px;
+    }
+    @include query-mobile-xl {
+
+        height: 290px;
+    }
+    @include query-mobile-l {
+
+        height: 270px;
+    }
+    @include query-mobile-m {
+
+        height: 250px;
+    }
+}
+
+.about__background-curve {
+
+    display: none;
+
+    @include query-laptop-l {
+
+        width: 100%;
+        display: unset;
+        position: absolute;
+        top: 959px;
+        z-index: -1;
+    }
+    @include query-laptop {
+
+        top: 919px;
+    }
+    @include query-tablet-l {
+
+        top: 869px;
+    }
+    @include query-tablet {
+
+        display: none;
+    }
+}
+
+.about__content {
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .about__content-container {
+
+        position: relative;
+        display: flex;
+        margin-left: $horizontal-section-spacing--l;
+        margin-top: $vertical-section-spacing;
+
+        @include query-desktop-s {
+
+            margin-left: $horizontal-section-spacing--m;
+        }
+        @include query-laptop-l {
+
+            margin-left: 13rem;
+        }
+        @include query-laptop {
+
+            margin-left: $horizontal-section-spacing--l;
+        }
+        @include query-tablet-l {
+
+            margin-left: $horizontal-section-spacing--s;
+        }
+        @include query-tablet {
+
+            margin-left: 0;
+        }
+    }
+    @include query-laptop-l {
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @include query-tablet {
+
+        align-items: center;
+    }
+}
+
+.about__header {
+
+    display: flex;
+
+    .about__header-image {
+
+        width: 32rem;
+
+        @include query-desktop-s {
+
+            width: 30rem;
+        }
+        @include query-tablet-l {
+
+            width: 28rem;
+        }
+        @include query-tablet {
+
+            width: 25.5rem;
+        }
+        @include query-mobile-xl {
+
+            width: 21.5rem;
+        }
+        @include query-mobile-l {
+
+            width: 19rem;
+        }
+        @include query-mobile-m {
+
+            width: 16.5rem;
+        }
+        @include query-mobile-s {
+
+            width: 15.5rem;
+        }
+    }
+    .about__header-text {
+
+        margin: $small-spacing 0 0 $xl-spacing;
+
+        h3 {
+
+            font-family: "gilroy-light";
+            color: $secondary-color-dark;
+        }
+        .about__header-overlay {
+
+            position: relative;
+
+            .about__header-overlay-item {
+                
+                background-color: transparent;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            h1 {
+
+                margin-top: $small-spacing;
+                color: $secondary-color-dark;
+                box-shadow: inset 0 -20px 0 0 $primary-color-light;
+            }
+        }
+        @include query-laptop-l {
+
+            display: none;            
+        }
+    }
+}
+
+.about__body {
+
+    display: flex;
+    position: absolute;
+    bottom: -125px;
+    right: -75px;
+
+    .about__body-container {
+
+        width: 13rem;
+        height: 13rem;
+        position: relative;
+
+        .about__body-image {
+
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.08), 0 0 40px rgba(0, 0, 0, 0.08);
+        }
+        .about__body-background {
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            background-color: $secondary-color-accent;
+        }
+        @include query-tablet-l {
+
+            width: 12rem;
+            height: 12rem;
+        }
+    }
+    .about__body-text {
+
+        max-width: $item-container--m;
+        @include flex-column-center;
+        margin-left: $large-spacing;
+
+        @include query-desktop-s {
+
+            max-width: $item-container--s;
+        }
+        @include query-laptop-l {
+
+            max-width: $item-container--xs;
+        }
+        @include query-laptop-l {
+
+            display: none;            
+        }
+    }
+    @include query-laptop-l {
+
+        bottom: -125px;
+        right: -175px;
+    }
+    @include query-tablet-l {
+
+        right: -90px;
+    }
+    @include query-tablet {
+
+        display: none;
+    }
+}
+
+.about__body-text p {
+
+    margin-bottom: $extra-small-spacing;
+
+    &:last-of-type {
+
+        margin-bottom: 0;
+    }
+}
+
+.about__text--laptop {
+
+    display: none;
+
+    .about__text-container--laptop {
+
+        @include flex-column-center-start--vertical;
+
+        h3 {
+
+            font-family: "gilroy-light";
+            color: $secondary-color-dark;
+        }
+        .about__header-overlay {
+    
+            position: relative;
+            margin-bottom: $medium-spacing;
+    
+            .about__header-overlay-item {
+                
+                background-color: transparent;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            h1 {
+    
+                margin-top: $small-spacing;
+                color: $secondary-color-dark;
+                box-shadow: inset 0 -20px 0 0 rgba(220,173,173,.3);
+            }
+        }
+        .about__body-text {
+    
+            max-width: $item-container;
+            @include flex-column-center;
+
+            @include query-tablet {
+
+                text-align: center;
+            }
+            @include query-tablet {
+
+                max-width: $item-container--s;
+            }
+            @include query-mobile-xl {
+
+                max-width: 80%;
+            }
+        }
+        @include query-tablet {
+
+            align-items: center;
+        }
+    }
+    @include query-laptop-l {
+
+        display: flex;
+        flex-direction: column;
+        margin-top: $large-spacing;
+        margin-left: 13rem;
+    }
+    @include query-laptop {
+
+        margin-left: $horizontal-section-spacing--l;
+    }
+    @include query-tablet-l {
+
+        margin-left: $horizontal-section-spacing--s;
+    }
+    @include query-tablet {
+
+        margin-left: 0;
+    }
+}
+
+// Instagram Feed //
+
+@import "imports/components/instagram-feed";

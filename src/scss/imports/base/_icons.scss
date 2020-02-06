@@ -1,0 +1,43 @@
+
+/* Icon Styling */
+
+.icon {
+
+    width: 3rem;
+}
+
+.icon--large {
+
+    width: 2.25rem;
+}
+
+.icon--medium {
+
+    width: 2rem;
+}
+
+.icon--small {
+
+    width: 1.5rem;
+}
+
+.icon--extra-small {
+
+    width: 1.25rem;
+}
+
+.svg-icon-hover--fill, .svg-icon-hover--stroke {
+
+    cursor: pointer;
+    @include transition-fast;
+}
+
+svg:hover .svg-icon-hover--fill {
+
+    fill: $primary-color;
+}
+
+svg:hover .svg-icon-hover--stroke {
+
+    stroke: $primary-color;
+}

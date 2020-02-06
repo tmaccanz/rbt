@@ -1,0 +1,204 @@
+
+/* Link Styling */
+
+// Base Link Hover //
+
+.link--hover {
+
+    position: relative;
+    z-index: 1001;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+
+        content: '';
+        background: rgba(220, 173, 173, 0.4);
+        position: absolute;
+        top: 65%;
+        height: 25%;
+        width: 0;
+    }
+    &::before {
+
+        left: -1%;
+    }
+    &:after {
+
+        right: 0;
+        transition: width 0.4s ease-out;
+    }
+    &:hover {
+
+        &:before {
+
+            width: 102%;  
+            transition: width 0.4s ease-out;
+            z-index: 101;
+        }
+        
+        &:after {
+
+            width: 102%;
+            background: transparent;
+            transition: 0;
+        }
+    }
+}
+
+.menu__nav > .link--hover {
+
+        &:before,
+        &:after {
+
+            @include query-tablet-l {
+
+                content: '';
+                background: rgba(220, 173, 173, 0.4);
+                position: absolute;
+                top: 27px;
+                height: 10px;
+                width: 0;
+            }
+            @include query-tablet {
+
+                content: '';
+                background: rgba(220, 173, 173, 0.4);
+                position: absolute;
+                top: 19px;
+                height: 8px;
+                width: 0;
+            }
+            @include query-mobile-l {
+
+                content: '';
+                background: rgba(220, 173, 173, 0.4);
+                position: absolute;
+                top: 18px;
+                height: 7px;
+                width: 0;
+            }
+            @include query-mobile-m {
+
+                content: '';
+                background: rgba(220, 173, 173, 0.4);
+                position: absolute;
+                top: 15px;
+                height: 7px;
+                width: 0;
+            }
+        }
+        &::before {
+
+            left: -1%;
+        }
+        &:after {
+
+            right: 0;
+            transition: width 0.4s ease-out;
+        }
+        &:hover {
+
+            &:before {
+
+                width: 102%;  
+                transition: width 0.4s ease-out;
+                z-index: 101;
+            }
+            
+            &:after {
+
+                width: 102%;
+                background: transparent;
+                transition: 0;
+            }
+        }
+    
+}
+
+// Secondary Link Hover //
+
+.link--secondary-hover {
+
+    position: relative;
+    z-index: 1001;
+
+    &:before,
+    &:after {
+
+        content: '';
+        background: rgba(220, 173, 173, 0.125);
+        position: absolute;
+        top: 65%;
+        height: 40%;
+        width: 0;
+    }
+    &::before {
+
+        left: -1%;
+    }
+    &:after {
+
+        right: 0;
+        transition: width 0.5s ease-out;
+    }
+    &:hover {
+
+        &:before {
+
+            width: 102%;  
+            transition: width 0.5s ease-out;
+            z-index: 101;
+        }
+        
+        &:after {
+
+            width: 102%;
+            background: transparent;
+            transition: 0;
+        }
+    }
+}
+
+// Drop Down Link Hover //
+
+.drop-down--hover {
+
+    position: relative;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+
+        content: '';
+        background: $secondary-color;
+        position: absolute;
+        top: 50%;
+        height: 2px;
+        width: 0;
+    }
+    &:before {
+
+        left: 0;
+    }
+    &:after {
+
+        right: 0;
+        transition: width 0.4s ease;
+    }
+    &:hover {
+
+        &:before {
+
+            width: 100%;  
+            transition: width 0.4s ease;
+        }
+        
+        &:after {
+
+            width: 100%;
+            background: transparent;
+            transition: 0;
+        }
+    }
+}

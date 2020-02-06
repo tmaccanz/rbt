@@ -1,0 +1,211 @@
+
+/* Instagram Feed Styling */
+
+
+.about__instagram {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 101;
+    padding: calc(10.5rem + 135px) 0 $vertical-section-spacing 0;
+
+    @include query-laptop-l {
+
+        padding: calc(10.5rem + 90px) 0 $vertical-section-spacing 0;
+    }
+    @include query-tablet {
+
+        padding: $between-section-spacing 0 $vertical-section-spacing 0;
+    }
+    @include query-tablet {
+
+        padding: 8.5rem 0 $vertical-section-spacing 0;
+    }
+}
+
+.instagram__link {
+
+    margin-bottom: $xl-spacing;
+    cursor: pointer;
+
+    h2 {
+
+        color: $secondary-color-dark;
+    }
+}
+
+.instagram__feed {
+
+    display: grid;
+    grid-template-columns: repeat (4, 1fr);
+    position: relative;
+    bottom: 0;
+}
+
+.instagram__feed li {
+
+    width: 13rem;
+    height: 13rem;
+    margin-right: $large-spacing;
+    position: relative;
+    @include transition-standard;
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07), 0 0 40px rgba(0, 0, 0, 0.07);
+
+    &:last-of-type {
+
+        margin-right: 0;
+    }
+    &:nth-of-type(1) {
+
+        grid-column: 1 / span 1;
+
+        &:hover {
+
+            transform: translateY(-35px);
+        }
+        @include query-laptop-l {
+
+            grid-column: 1 / span 1;
+        }
+        @include query-laptop {
+
+            margin-right: $horizontal-section-spacing--l;
+            margin-bottom: $xl-spacing;
+        }
+        @include query-tablet-l {
+
+            margin-right: $xl-spacing;
+        }
+        @include query-tablet {
+
+            margin-right: 0;
+        }
+    }
+    &:nth-of-type(2) {
+
+        grid-column: 2 / span 1;
+
+        &:hover {
+
+            transform: translateY(35px);
+
+            @include query-laptop {
+
+                transform: translateY(-35px);
+            }
+        }
+        @include query-laptop-l {
+
+            grid-column: 2 / span 1;
+        }
+        @include query-laptop {
+
+            margin-right: 0;
+            margin-bottom: $xl-spacing;
+        }
+        @include query-tablet {
+
+            grid-column: 1 / span 1;
+        }
+    }
+    &:nth-of-type(3) {
+
+        grid-column: 3 / span 1;
+
+        &:hover {
+
+            transform: translateY(-35px);
+
+            @include query-laptop {
+
+                transform: translateY(35px);
+            }
+        }
+        @include query-laptop-l {
+
+            margin-right: 0;
+            grid-column: 3 / span 1;
+        }
+        @include query-laptop {
+
+            margin-right: $horizontal-section-spacing--l;
+            grid-column: 1 / span 1;
+        }
+        @include query-tablet-l {
+
+            margin-right: $xl-spacing;
+        }
+        @include query-tablet {
+
+            margin-right: 0;
+            margin-bottom: $xl-spacing;
+            grid-column: 1 / span 1;
+        }
+    }
+    &:nth-of-type(4) {
+
+        grid-column: 4 / span 1;
+
+        &:hover {
+
+            transform: translateY(35px);
+        }
+        @include query-laptop-l {
+
+            display: none;
+        }
+        @include query-laptop {
+
+            margin-right: 0;
+            display: unset;
+            grid-column: 2 / span 1;
+        }
+        @include query-tablet {
+
+            grid-column: 1 / span 1;
+        }
+    }
+    @include query-laptop-l {
+
+        margin-right: $xl-spacing;
+    }
+    @include query-tablet {
+
+        width: 15rem;
+        height: 15rem;
+    }
+    @include query-mobile-m {
+
+        width: 14rem;
+        height: 14rem;
+    }
+}
+
+.instagram__feed li img {
+
+    max-width:100%;
+    max-height:100%;
+    cursor: pointer;
+}
+
+.instagram__background {
+
+    width: 100%;
+    height: 85%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+
+    @include query-laptop {
+
+        height: 60%;
+    }
+    @include query-tablet {
+
+        height: 125%;
+    }
+}

@@ -1,0 +1,88 @@
+
+/* Media Querys */
+
+@mixin query-mobile-s() {
+
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin query-mobile-m() {
+
+    @media only screen and (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin query-mobile-l() {
+
+    @media only screen and (max-width: 425px) {
+        @content;
+    }
+}
+
+@mixin query-mobile-xl() {
+
+    @media only screen and (max-width: 550px) {
+        @content;
+    }
+}
+
+@mixin query-tablet() {
+
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin query-tablet-l() {
+
+    @media only screen and (max-width: 980px) {
+        @content;
+    }
+}
+
+@mixin query-laptop() {
+
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin query-laptop-l() {
+
+    @media only screen and (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin query-desktop-s() {
+
+    @media only screen and (max-width: 1725px) {
+        @content;
+    }
+}
+
+@mixin query-desktop() {
+
+    @media only screen and (max-width: 1980px) {
+        @content;
+    }
+}
+
+@mixin query-widescreen() {
+
+    @media only screen and (min-width: 1980px) {
+        @content;
+    }
+}
+
+// Gallery Query //
+
+@mixin query-gallery-l() {
+
+    @media only screen and (max-width: 1600px) {
+        @content;
+    }
+}

@@ -1,0 +1,16 @@
+
+/* Transition Styling */
+
+// Element Transitions //
+
+@mixin transition-standard {
+
+    transition: 0.3s ease-in-out;
+}
+
+@mixin transition-fast {
+
+    transition: 0.15s ease-in-out;
+}
+
+// Page Transition //

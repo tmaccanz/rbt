@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}">
+
+	<head>
+
+		<!-- Head Information -->
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+		<base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+		<title>{{ $.Site.Title }}</title>
+		<meta name="description" content="/"/>
+		<meta name="author" content="Todd McAlinden"/>
+
+		<!-- Favicon -->
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/media/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/media/favicon/safari-pinned-tab.svg" color="#ECC0C0">
+		<meta name="msapplication-TileColor" content="#ECC0C0">
+		<meta name="theme-color" content="#ECC0C0">
+
+		<!-- Stylesheet -->
+		
+		<link rel="stylesheet" href="css/main.min.css"/>
+
+	</head>
+	  
+  	<body class="global-target">
+
+		<div class="preloader">
+
+			<div class="preloader__overlay"></div>
+			<img class="preloader__logo" src="/media/graphic/global/logo-text.svg" alt="Text logo for Refresh Beauty Therapy">
+
+		</div>
+		<div class="cursor cursor--small"></div>
+		<canvas class="cursor cursor--canvas" resize></canvas>
+
+			{{ block "main" . }}{{end}}
+
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js'></script>
+		<script src="https://unpkg.com/flubber@0.3.0"></script>
+		<script src="/js/main.min.js"></script>
+		
+  	</body>
+
+</html>

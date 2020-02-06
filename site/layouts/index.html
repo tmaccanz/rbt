@@ -1,0 +1,196 @@
+
+{{ define "main" }}
+
+{{ partial "header.html" . }}
+
+<!-- Home Page -->
+
+<main class="home home-target">
+    <div class="home__background"></div>
+    <svg class="home__background-curve" viewBox="0 0 97.1 1506"><title>background</title><path d="M74.6,0C36.2,167.5,26.8,307.7,26.4,410.3c-1.2,271.5,59.1,397.8,69.3,691.4A2346.6,2346.6,0,0,1,74.6,1506H0V0Z" style="fill:#faf8f5"/></svg>
+    <section class="home-container">
+        <div class="home-controls">
+            <div id="pagination">
+
+                <div class="pagination__column">
+                    <div class="pagination__item">
+                        <button class="active cursor-magnetic" data-slide="0">
+
+                            <div class="pagination__circle"></div>
+        
+                        </button>
+                        <label class="pagination__label">Massage</label>
+                    </div>
+                    <div class="pagination__item">
+                        <button class="cursor-magnetic" data-slide="1">
+
+                            <div class="pagination__circle"></div>
+
+                        </button>
+                        <label class="pagination__label">Eyebrow & Lash</label>
+                    </div>
+                    <div class="pagination__item">
+                        <button class="cursor-magnetic" data-slide="2">
+
+                            <div class="pagination__circle"></div>
+
+                        </button>
+                        <label class="pagination__label">Facial</label>
+                    </div>
+                    <div class="pagination__item">
+                        <button class="cursor-magnetic" data-slide="3">
+
+                            <div class="pagination__circle"></div>
+
+                        </button>
+                        <label class="pagination__label">Nail</label>
+                    </div>
+                </div>
+                <div class="pagination__column">
+                    <div class="pagination__item">
+                        <button class="cursor-magnetic" data-slide="4">
+
+                            <div class="pagination__circle"></div>
+
+                        </button>
+                        <label class="pagination__label">Makeup</label>
+                    </div>
+                    <div class="pagination__item">
+                        <button class="cursor-magnetic" data-slide="5">
+
+                            <div class="pagination__circle"></div>
+
+                        </button>
+                        <label class="pagination__label">For Men</label>
+                    </div>
+                    <div class="pagination__item">
+                        <button class="cursor-magnetic" data-slide="6">
+
+                            <div class="pagination__circle"></div>
+
+                        </button>
+                        <label class="pagination__label">Spray Tan</label>
+                    </div>
+                    <div class="pagination__item">
+                        <button class="cursor-magnetic" data-slide="7">
+
+                            <div class="pagination__circle"></div>
+
+                        </button>
+                        <label class="pagination__label">Waxing</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="home-slider">
+            <div id="home-slider__images" data-displacement="/media/image/home/displacement/7.jpg" data-intensity="-0.65" data-speedIn="1.2" data-speedOut="1.2" data-easing="Circ.easeOut">
+                    
+                <img src="/media/image/home/content/massage.jpg"/>
+                <img src="/media/image/home/content/eyebrow-lash.jpg"/>
+                <img src="/media/image/home/content/facial.jpg"/>
+                <img src="/media/image/home/content/nail.jpg"/>
+                <img src="/media/image/home/content/makeup.jpg"/>
+                <img src="/media/image/home/content/men.jpg"/>
+                <img src="/media/image/home/content/tan.jpg"/>
+                <img src="/media/image/home/content/wax.jpg"/>
+
+            </div>
+            <div class="home-slider__content">
+                <div class="home-slider__text" id="slide-text--start">
+                    <div class="home-slider__text-container">
+
+                        <div class="home-slider__header">Massage Menu</div>
+
+                    </div>
+                    <a class="home-slider__overlay-link cursor-pointer" href="{{ relref . "treatment-massage.html" }}"></a>
+                </div>
+                <div class="home-slider__header-background"></div>
+                <span data-slide-content="0">
+                    <div class="home-slider__text">
+                        <div class="home-slider__text-container">
+
+                            <div class="home-slider__header">Massage Menu</div>
+
+                        </div>
+                    </div>
+                    <a class="home-slider__overlay-link cursor-pointer" href="{{ relref . "treatment-massage.html" }}"></a>
+                </span>
+                <span data-slide-content="1">
+                    <div class="home-slider__text">
+                        <div class="home-slider__text-container">
+
+                            <div class="home-slider__header">Eyebrow & Lash Menu</div>
+
+                        </div>
+                    </div>
+                    <a class="home-slider__overlay-link cursor-pointer" href="{{ relref . "treatment-eyebrow.html" }}"></a>
+                </span>
+                <span data-slide-content="2">
+                    <div class="home-slider__text">
+                        <div class="home-slider__text-container">
+
+                            <div class="home-slider__header">Facial Menu</div>
+
+                        </div>
+                    </div>
+                    <a class="home-slider__overlay-link cursor-pointer" href="{{ relref . "treatment-facial.html" }}"></a>
+                </span>
+                <span data-slide-content="3">
+                    <div class="home-slider__text">
+                        <div class="home-slider__text-container">
+
+                            <div class="home-slider__header">Nail Menu</div>
+
+                        </div>
+                    </div>
+                    <a class="home-slider__overlay-link cursor-pointer" href="{{ relref . "treatment-nail.html" }}"></a>
+                </span>
+                <span data-slide-content="4">
+                    <div class="home-slider__text">
+                        <div class="home-slider__text-container">
+
+                            <a class="home-slider__header">Makeup Menu</a>
+
+                        </div>
+                    </div>
+                    <a class="home-slider__overlay-link cursor-pointer" href="{{ relref . "treatment-makeup.html" }}"></a>
+                </span>
+                <span data-slide-content="5">
+                    <div class="home-slider__text">
+                        <div class="home-slider__text-container">
+
+                            <div class="home-slider__header">For Men Menu</div>
+
+                        </div>
+                    </div>
+                    <a class="home-slider__overlay-link cursor-pointer" href="{{ relref . "treatment-men.html" }}"></a>
+                </span>
+                <span data-slide-content="6">
+                    <div class="home-slider__text">
+                        <div class="home-slider__text-container">
+
+                            <div class="home-slider__header">Spray tan Menu</div>
+
+                        </div>
+                    </div>
+                    <a class="home-slider__overlay-link cursor-pointer" href="{{ relref . "treatment-spray-tan.html" }}"></a>
+                </span>
+                <span data-slide-content="7">
+                    <div class="home-slider__text">
+                        <div class="home-slider__text-container">
+
+                            <div class="home-slider__header">Waxing Menu</div>
+
+                        </div>
+                    </div>
+                    <a class="home-slider__overlay-link cursor-pointer" href="{{ relref . "treatment-waxing.html" }}"></a>
+                </span>
+            </div>
+        </div>
+    </section>
+</main>
+
+{{end}}
+
+
