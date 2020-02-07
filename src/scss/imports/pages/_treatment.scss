@@ -3,11 +3,15 @@
 
 // Treatment Introduction //
 
+.treatment {
+
+    position: relative;
+}
+
 .treatment__menu {
 
     width: calc(100% - 17rem);
     border-radius: 2px;
-    position: absolute;
     top: 0;
     margin: $vertical-section-spacing 0;
     background-color: $cream-color;

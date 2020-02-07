@@ -413,10 +413,6 @@
     
             margin: 7px 0;
         }
-        &:hover > .menu-icon__line {
-    
-            background-color:  $secondary-color-accent;
-        }
         @include query-mobile-xl {
 
             transform: rotate(90deg);
