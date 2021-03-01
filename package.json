@@ -26,7 +26,7 @@
 				"simple-parallax-js": "^5.2.0",
 				"simplex-noise": "^2.4.0",
 				"swup": "^2.0.8",
-				"three": "^0.112.1",
+				"three": "^0.125.0",
 				"whatwg-fetch": "^3.0.0"
 		},
 		"resolutions": {},
